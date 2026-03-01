@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+.login-page {
+    min-height: 100vh; /* تغيير من height إلى min-height لضمان عدم القص في الشاشات الصغيرة */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Cairo', sans-serif;
+    padding: 20px; /* مسافة أمان للجوانب في الجوال */
+    box-sizing: border-box;
+}
+
+.login-frame {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid #c5a059;
+    padding: 40px 30px; /* تقليل الحشو الجانبي قليلاً */
+    border-radius: 15px;
+    width: 100%; /* العرض الكامل للجوال */
+    max-width: 450px; /* لكن لا يتجاوز 450px في اللابتوب */
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+
+.login-title {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: clamp(1.8rem, 5vw, 2.5rem); /* حجم خط مرن يكبر ويصغر حسب الشاشة */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text {
+    color: #c5a059;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #c5a059;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 16px; /* 16px تمنع متصفح الآيفون من عمل زووم تلقائي مزعج */
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+/* تعديلات خاصة للجوالات الصغيرة جداً */
+@media (max-width: 400px) {
+    .login-frame {
+        padding: 30px 20px;
+    }
+    .login-title {
+        font-size: 1.8rem;
+    }
+}

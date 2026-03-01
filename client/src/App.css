@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+/* --- General Reset --- */
+body { 
+    margin: 0; padding: 0; font-family: 'Cairo', sans-serif; 
+    direction: rtl; background-color: #0b0b0b; color: white; 
+    overflow-x: hidden; /* يمنع التمرير الأفقي المزعج في الجوال */
+}
+
+/* --- Login Page --- */
+.login-page { 
+    min-height: 100vh; /* تغيير لضمان التغطية الكاملة */
+    width: 100%;
+    background: linear-gradient(rgba(197, 160, 89, 0.25), rgba(0, 0, 0, 0.75)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-frame { 
+    background: rgba(10, 10, 10, 0.9); 
+    backdrop-filter: blur(10px);
+    border: 2px solid #c5a059; 
+    padding: 40px 20px; 
+    border-radius: 15px;
+    width: 100%;
+    max-width: 420px; /* يحافظ على حجمه في اللابتوب ويصغر في الجوال */
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.main-title { 
+    font-size: clamp(1.5rem, 8vw, 2.2rem); /* خط مرن */
+    margin-bottom: 10px; 
+    width: 100%; 
+}
+
+/* --- Main Layout Responsive --- */
+.app-container { 
+    padding: 20px; /* تقليل الحشو في الجوال */
+    max-width: 1100px; 
+    margin: auto; 
+}
+
+.main-header { 
+    display: flex; 
+    flex-wrap: wrap; /* للسماح بنزول العناصر في الجوال */
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 15px;
+    margin-bottom: 30px; 
+    border-bottom: 1px solid #333; 
+    padding-bottom: 15px; 
+}
+
+/* --- Cards & Inputs --- */
+.card { 
+    background: #161616; 
+    padding: clamp(15px, 5vw, 25px); 
+    border-radius: 10px; 
+    border: 1px solid #222; 
+    margin-bottom: 25px; 
+}
+
+.horizontal-inputs { 
+    display: flex; 
+    flex-wrap: wrap; /* يجعل المدخلات تحت بعضها في الجوال */
+    gap: 15px; 
+    margin-bottom: 15px; 
+}
+
+.horizontal-inputs input, .combined-field { 
+    flex: 1 1 200px; /* يتمدد ولكن ينزل للسطر التالي إذا قل العرض عن 200px */
+    width: 100%;
+}
+
+/* --- Table Responsiveness (الجزء الأهم) --- */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* يسمح بالتمرير الأفقي للجدول فقط في الجوال دون تخريب الموقع */
+    -webkit-overflow-scrolling: touch;
+}
+
+.modern-table { 
+    width: 100%; 
+    min-width: 600px; /* يمنع انضغاط الجدول بشكل بشع */
+    border-collapse: collapse; 
+}
+
+/* --- Summary Section --- */
+.summary-section { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-top: 25px; 
+}
+
+.summary-section button { 
+    flex: 1 1 150px; 
+}
+
+/* --- Media Queries --- */
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-left {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .horizontal-inputs {
+        flex-direction: column;
+    }
+
+    .action-btns {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .action-btns button {
+        width: 100%;
+    }
+}
+
+/* --- Print --- */
+@media print { 
+    .no-print { display: none !important; } 
+    body { background: white !important; color: black !important; }
+}
+
+/* بقية أكواد الأيقونات والـ Modal تظل كما هي لأنها متوافقة أصلاً */
+.modal-content { width: 95%; max-width: 400px; }
