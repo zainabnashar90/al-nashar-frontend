@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap');
+
+.login-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* صورة خلفية معمارية فخمة */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Cairo', sans-serif;
+}
+
+.login-frame {
+    background: rgba(255, 255, 255, 0.1); /* تأثير زجاجي خفيف */
+    backdrop-filter: blur(10px);
+    border: 2px solid #c5a059; /* إطار بلون ذهبي مطفي لإعطاء فخامة */
+    padding: 40px;
+    border-radius: 15px;
+    width: 450px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.login-title {
+    color: #ffffff;
+    font-weight: 900; /* خط غامق جداً */
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-text {
+    color: #c5a059; /* لون ذهبي */
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.input-field {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #c5a059;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.input-field input:focus {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: #ffffff;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: #c5a059;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.submit-btn:hover {
+    background: #e2bd78;
+    transform: scale(1.02);
+}
+
+.error-text {
+    color: #ff5e5e;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
